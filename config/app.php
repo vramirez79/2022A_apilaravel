@@ -163,7 +163,7 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
-
+        App\Providers\JwtAuthServiceProvider::class,
         /*
          * Package Service Providers...
          */
@@ -194,6 +194,7 @@ return [
 
     'aliases' => Facade::defaultAliases()->merge([
         // ...
+        'JwtAuth' => App\Helpers\JwtAuth::class,
     ])->toArray(),
 
 ];
